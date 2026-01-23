@@ -1,8 +1,11 @@
 import React from "react";
+import usersIcon from "../assets/users_icon.svg";
+import fuelIcon from "../assets/fuel_icon.svg";
+import carIcon from "../assets/car_icon.svg";
+import locationIcon from "../assets/location_icon.svg";
 
 const CarCard = ({ car }) => {
-
-  const currency = import.meta.env.VITE_CURRENCY
+  const currency = import.meta.env.VITE_CURRENCY;
   return (
     <div className="group rounded-xl overflow-hidden shadow-lg hover:translate-y-1 transition-all duration-500 cursor-progress">
       <div className="relative h-48 overflow-hidden">
@@ -17,7 +20,10 @@ const CarCard = ({ car }) => {
           </p>
         )}
         <div className="absolute bottom-4 right-4 bg-black/80 backdrop:blur-sm text-white px-3 py-2 rounded-lg">
-          <span className="font-semibold">{currency}{car.pricePerDay}</span>
+          <span className="font-semibold">
+            {currency}
+            {car.pricePerDay}
+          </span>
           <span className="text-sm text-white/80"> / day</span>
         </div>
       </div>
@@ -25,26 +31,31 @@ const CarCard = ({ car }) => {
       <div className="p-4 sm:p-5">
         <div className=" flex justify-between items-start mb-2">
           <div>
-            <h3 className="text-lg font-medium">{car.brand} {car.model}</h3>
-            <p className="text-muted-foreground text-sm">{car.category} {car.year}</p>
+            <h3 className="text-lg font-medium">
+              {car.brand} {car.model}
+            </h3>
+            <p className="text-muted-foreground text-sm">
+              {car.category} . {car.year}
+            </p>
           </div>
         </div>
+
         <div className="mt-4 grid grid-cols-2 gap-y-2 text-gray-600">
           <div className="flex items-center text-sm text-muted-foreground">
-            <img src={} alt="" className="h-4 mr-2"/>
-            <span className="">{car.seating_capacity} Seats</span>
+            <img src={usersIcon} alt="usersIcon" className="h-4 mr-2" />
+            <span>{car.seating_capacity} Seats</span>
           </div>
-                    <div className="flex items-center text-sm text-muted-foreground">
-            <img src={} alt="" className="h-4 mr-2"/>
-            <span className="">{car.fuel_icon}</span>
+          <div className="flex items-center text-sm text-muted-foreground">
+            <img src={fuelIcon} alt="fuelIcon" className="h-4 mr-2" />
+            <span>{car.fuel_type}</span>
           </div>
-                              <div className="flex items-center text-sm text-muted-foreground">
-            <img src={} alt="" className="h-4 mr-2"/>
-            <span className="">{car.transmission}</span>
+          <div className="flex items-center text-sm text-muted-foreground">
+            <img src={carIcon} alt="carIcon" className="h-4 mr-2" />
+            <span>{car.transmission}</span>
           </div>
-                                        <div className="flex items-center text-sm text-muted-foreground">
-            <img src={} alt="" className="h-4 mr-2"/>
-            <span className="">{car.location}</span>
+          <div className="flex items-center text-sm text-muted-foreground">
+            <img src={locationIcon} alt="locationIcon" className="h-4 mr-2" />
+            <span>{car.location}</span>
           </div>
         </div>
       </div>
