@@ -11,7 +11,7 @@ function App() {
   const [showLogin, setShowLogin] = useState(false);
   const isOwnerPath = useLocation().pathname.startsWith("/owner");
   return (
-    <div className="">
+    <div>
       {/* NAVBAR */}
       {!isOwnerPath && <Navbar setShowLogin={setShowLogin} />}
       {/* ROUTES */}
