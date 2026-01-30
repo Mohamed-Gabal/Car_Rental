@@ -1,4 +1,3 @@
-import React from "react";
 import Title from "./Title";
 import Test from "../assets/testimonial.jpg";
 import Test_1 from "../assets/testimonial_1.jpg";

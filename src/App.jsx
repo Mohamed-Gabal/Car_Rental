@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import CarDetails from "./pages/CarDetails";
 import Cars from "./pages/Cars";
 import MyBookings from "./pages/MyBookings";
+import Footer from "./components/Footer";
 
 function App() {
   // NOT SHOW LOGIN
@@ -21,6 +22,8 @@ function App() {
         <Route path="/cars" element={<Cars />} />
         <Route path="/my-bookings" element={<MyBookings />} />
       </Routes>
+      {/* FOOTER */}
+      {!isOwnerPath && <Footer />}
     </div>
   );
 }

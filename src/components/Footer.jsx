@@ -1,9 +1,71 @@
-import React from 'react';
+import React from "react";
+import Logo from "../assets/logo.png";
+import FacebookIcon from "../assets/facebook.png";
+import instagramIcon from "../assets/instagram.svg";
+import TwitterIcon from "../assets/twitter.svg";
+import GmailIcon from "../assets/gmail.svg";
 
 const Footer = () => {
   return (
-    <div className=''></div>
+    <div className="px-6 md:px-16 lg:px-24 xl:px-32 mt-40 text-sm text-gray-500">
+      <div className="flex flex-wrap justify-between items-start gap-8 pb-6 border-borderColor border-b">
+        <div className="max-w-80">
+          <img src={Logo} alt="logo" className="h-8 md:h-9" />
+          <p className="max-w-80 mt-3">
+            Premium car rental service with a wide selection of luxury and
+            everyday vehicles for all your driving needs.
+          </p>
+          <div className="flex items-center gap-3 mt-6">
+          <a href="#"><img src={FacebookIcon} alt="facebook" className="w-5"/></a>
+          <a href="#"><img src={instagramIcon} alt="instagram" className="w-5"/></a>
+          <a href="#"><img src={TwitterIcon} alt="twitter" className="w-5"/></a>
+          <a href="#"><img src={GmailIcon} alt="gmail" className="w-5"/></a>
+          </div>
+        </div>
+
+        <div>
+          <h2 className="text-base font-medium text-gray-800 uppercase">Quick Links</h2>
+          <ul className="mt-3 flex flex-col gap-1.5">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Browse Car</a></li>
+            <li><a href="#">List Your Car</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h2 className="text-base font-medium text-gray-800 uppercase">Resources</h2>
+          <ul className="mt-3 flex flex-col gap-1.5">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Insurance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 className="text-base font-medium text-gray-800 uppercase">Contact</h2>
+          <ul className="mt-3 flex flex-col gap-1.5">
+            <li><a href="#">1234  Luxury Drive</a></li>
+            <li><a href="#">San Francisco, CA 94107</a></li>
+            <li><a href="#">+1 234 56789</a></li>
+            <li><a href="#">info@example.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="flex flex-col md:flex-row gap-2 items-center justify-between py-5">
+        <p>© {new Date().getFullYear()} Brand. All rights reserved.</p>
+        <ul className="flex items-center gap-4">
+          <li><a href="#">Privacy</a></li>
+          <li> | </li>
+          <li><a href="#">Terms</a></li>
+          <li> | </li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
   );
-}
+};
 
 export default Footer;

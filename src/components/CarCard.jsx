@@ -3,11 +3,20 @@ import usersIcon from "../assets/users_icon.svg";
 import fuelIcon from "../assets/fuel_icon.svg";
 import carIcon from "../assets/car_icon.svg";
 import locationIcon from "../assets/location_icon.svg";
+import { useNavigate } from "react-router-dom";
 
 const CarCard = ({ car }) => {
   const currency = import.meta.env.VITE_CURRENCY;
+  const navigate = useNavigate();
+
   return (
-    <div className="group rounded-xl overflow-hidden shadow-lg hover:translate-y-1 transition-all duration-500 cursor-progress">
+    <div
+      className="group rounded-xl overflow-hidden shadow-lg hover:translate-y-1 transition-all duration-500 cursor-pointer"
+      onClick={() => {
+        navigate(`/car-details/${car._id}`);
+        scrollTo(0, 0);
+      }}
+    >
       <div className="relative h-48 overflow-hidden">
         <img
           src={car.image}
