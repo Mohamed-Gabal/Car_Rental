@@ -3,6 +3,9 @@ import carImage_1 from "./cart_1.png";
 import carImage_2 from "./cart_2.png";
 import carImage_3 from "./cart_3.png";
 
+// IMPORT ICONS
+import User from "../assets/users_icon.svg";
+
 // LINKS
 export const menuLinks = [
   { name: "Home", path: "/" },
@@ -13,6 +16,15 @@ export const menuLinks = [
 // CITYLIST
 export const cityList = ["New York", "Los Angeles", "Houston", "Chicago"];
 
+// DUMMY USER DATA
+export const dummyUserData = {
+  _id: "6847f7cab3d8daecdb517095",
+  name: "GreatStack",
+  email: "admin@example.com",
+  role: "owner",
+  image: User,
+};
+
 // DUMMY CAR DATA
 export const dummyCarData = [
   {
@@ -20,7 +32,7 @@ export const dummyCarData = [
     owner: "67fe3467ed8a8fe17d0ba6e2",
     brand: "BMW",
     model: "X5",
-    "image": carImage_1,
+    image: carImage_1,
     year: "2006",
     category: "SUV",
     seating_capacity: 4,
@@ -38,7 +50,7 @@ export const dummyCarData = [
     owner: "67fe3467ed8a8fe17d0ba6e2",
     brand: "Toyota",
     model: "Corolla",
-    "image": carImage_2,
+    image: carImage_2,
     year: "2021",
     category: "Sedan",
     seating_capacity: 4,
@@ -56,7 +68,7 @@ export const dummyCarData = [
     owner: "67fe3467ed8a8fe17d0ba6e2",
     brand: "Jeep",
     model: "Wrangler",
-    "image": carImage_3,
+    image: carImage_3,
     year: "2023",
     category: "SUV",
     seating_capacity: 4,
@@ -74,7 +86,7 @@ export const dummyCarData = [
     owner: "67fe3467ed8a8fe17d0ba6e2",
     brand: "Ford",
     model: "Neo 6",
-    "image": carImage_1,
+    image: carImage_1,
     year: "2022",
     category: "Sedan",
     seating_capacity: 2,
@@ -86,5 +98,53 @@ export const dummyCarData = [
       "This is a mid-size luxury Sedan produced by Ford. The Neo 6 made its debut in 2022 as the first Sedan ever produced by Ford.",
     isAvailable: "true",
     createdAt: "2025-04-17T06:15:47.318Z",
+  },
+];
+
+// DUMMY BOOKINGS DATA
+export const dummyMyBookingsData = [
+  {
+    _id: "68482bcc98eb9722b7751f70",
+    car: dummyCarData[0],
+    user: "6847f7cab3d8daecdb517095",
+    owner: "6847f7cab3d8daecdb517095",
+    pickupDate: "2025-06-13T00:00:00.000Z",
+    returnDate: "2025-06-14T00:00:00.000Z",
+    status: "confirmed",
+    price: 400,
+    createdAd: "2025-06-10T12:57:48.244Z",
+  },
+  {
+    _id: "68482bb598eb9722b7751f60",
+    car: dummyCarData[1],
+    user: "6847f7cab3d8daecdb517095",
+    owner: "6847f7cab3d8daecdb517095",
+    pickupDate: "2025-06-12T00:00:00.000Z",
+    returnDate: "2025-06-12T00:00:00.000Z",
+    status: "pending",
+    price: 130,
+    createdAd: "2025-06-10T12:57:25.613Z",
+  },
+  {
+    _id: "68482bcc98eb9722b7751f70",
+    car: dummyCarData[2],
+    user: "6847f7cab3d8daecdb517095",
+    owner: "6847f7cab3d8daecdb517095",
+    pickupDate: "2025-06-13T00:00:00.000Z",
+    returnDate: "2025-06-14T00:00:00.000Z",
+    status: "confirmed",
+    price: 200,
+    createdAd: "2025-06-10T12:57:48.244Z",
+  },
+  {
+    _id: "68482bb598eb9722b7751f60",
+    car: dummyCarData[3],
+    user: "6847f7cab3d8daecdb517095",
+    owner: "6847f7cab3d8daecdb517095",
+    pickupDate: "2025-06-12T00:00:00.000Z",
+    returnDate: "2025-06-12T00:00:00.000Z",
+    status: "pending",
+    price: 440,
+    createdAd: "2025-06-10T12:57:25.613Z",
   },
 ];
