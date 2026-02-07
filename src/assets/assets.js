@@ -5,6 +5,13 @@ import carImage_3 from "./cart_3.png";
 
 // IMPORT ICONS
 import User from "../assets/users_icon.svg";
+import Dashboard_icon from "../assets/dashboard_icon.svg";
+import AddCar from "../assets/add_car.svg";
+import ManageCars from "../assets/manage_cars.svg";
+import ManageBookings from "../assets/manage_bookings.svg";
+
+// CITYLIST
+export const cityList = ["New York", "Los Angeles", "Houston", "Chicago"];
 
 // LINKS
 export const menuLinks = [
@@ -13,8 +20,29 @@ export const menuLinks = [
   { name: "My Bookings", path: "/my-bookings" },
 ];
 
-// CITYLIST
-export const cityList = ["New York", "Los Angeles", "Houston", "Chicago"];
+// OWNER LINKS
+export const ownerMenuLinks = [
+  {
+    name: "Dashboard",
+    path: "/owner",
+    icon: Dashboard_icon,
+  },
+  {
+    name: "Add Car",
+    path: "/owner/add-car",
+    icon: AddCar,
+  },
+  {
+    name: "Manage Cars",
+    path: "/owner/manage-cars",
+    icon: ManageCars,
+  },
+  {
+    name: "Manage Bookings",
+    path: "/owner/manage-bookings",
+    icon: ManageBookings,
+  },
+];
 
 // DUMMY USER DATA
 export const dummyUserData = {
